@@ -14,7 +14,6 @@ constructor(
 
   @Get(':id')
   getCarsById(@Param('id', ParseIntPipe ) id:number) {
-    console.log({ id });
     return this.carscervice.findByid(id);
   } 
 }
