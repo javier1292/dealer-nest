@@ -8,7 +8,7 @@ import { error } from 'node:console';
 export class CarsService {
 
     private cars: Car[] = [
-        {
+      /*   {
             id: uuid(),
             brand: 'toyota',
             model: 'corolla'
@@ -22,7 +22,7 @@ export class CarsService {
             id: uuid(),
             brand: 'jeep',
             model: 'cherokee'
-        }
+        } */
     ];
 
     findAll() {
@@ -67,6 +67,11 @@ export class CarsService {
             throw new NotFoundException(`Carro no encontrado`);
         }
         return car;
+    }
+
+    fillCarsSeed(cars: Car[]){
+
+        this.cars = cars;
     }
 
 }
